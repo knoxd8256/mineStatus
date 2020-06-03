@@ -1,0 +1,17 @@
+img {
+    height: 64px;
+    display: inline-block;
+}
+header {
+    background-color: #234;
+    margin-bottom: 2em;
+}
+header h1 {
+    color: #BBF
+}
+.statindicator {
+    color: darkred;
+}
+.online {
+    color: green;
+}

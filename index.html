@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://taniarascia.github.io/primitive/css/main.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>MineStatus</title>
+</head>
+<body>
+    <main id="app">
+        <header class="vertical-center">
+            <img v-bind:src="icon" alt="Yodeling Bear Icon">
+            <h1>Yodeling Bear Status</h1>
+        </header>
+        <article class="small-container">
+            Hostname: {{ hostname }}<br />
+            MOTD: {{ motd }} <br />
+            <span class="statindicator" v-bind:class="{ online: online }"> {{ online ? "ONLINE" : "OFFLINE"}} </span> <br />
+            <table class="striped-table">
+                <thead>
+                    <th>Players</th>
+                </thead>
+                <tbody>
+                    <tr v-for="player in players"> <td>{{ player }} </td></tr>
+                </tbody>
+            </table>
+        </article>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="index.js"></script>
+</html>
